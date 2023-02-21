@@ -1,0 +1,53 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.bgAnimation {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	display: grid;
+	grid-template-columns: repeat(20, 1fr);
+	grid-template-rows: repeat(20, 1fr);
+	background-color: #1d1d1d;
+	filter: saturate(2);
+	overflow: hidden;
+}
+
+.colorBox {
+	z-index: 2;
+	filter: brightness(1.1);
+	transition: 2s ease;
+	position: relative;
+	margin: 2px;
+	background-color: #1d1d1d;
+	border-radius: 20%;
+}
+
+.colorBox:hover {
+	background-color: #d9ff0085;
+	transition-duration: 0s;
+}
+
+.bgAnim {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 60px;
+	background-color: #d9ff0085;
+	filter: blur(60px);
+	animation: animeBack 6s linear infinite;
+}
+
+@keyframes animeBack {
+	0% {
+		top: -60px;
+	}
+	100% {
+		top: 120%;
+	}
+}
